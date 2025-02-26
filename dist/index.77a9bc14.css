@@ -1,0 +1,134 @@
+body {
+  background-color: #12321f;
+  place-items: center;
+  min-width: 1110px;
+  padding: 1.5rem;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #eacece;
+  font-size: 3.5rem;
+}
+
+.container {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0;
+  display: flex;
+}
+
+.card {
+  --white: #fff;
+  --black: #14141a;
+  --paragraph: #d4d4d4;
+  --line: #27272f;
+  --primary: #e7c70d;
+  text-align: center;
+  background-color: #14141a;
+  background-image: radial-gradient(at 88% 40%, #14141a 0, #0000 85%), radial-gradient(at 49% 30%, #151a14 0, #0000 85%), radial-gradient(at 14% 26%, #141a16 0, #0000 85%), radial-gradient(at 0 64%, #018354 0, #0000 85%), radial-gradient(at 41% 94%, #03b585 0, #0000 85%), radial-gradient(at 100% 99%, #024030 0, #0000 85%);
+  flex-direction: column;
+  gap: 1rem;
+  width: calc(26.66% - 20px);
+  margin-bottom: 20px;
+  padding: 1rem;
+  transition: all .3s;
+  display: flex;
+  position: relative;
+}
+
+.card .card__border:before {
+  content: "";
+  pointer-events: none;
+  z-index: 200;
+  transform: translate(-50%, -50%), rotate(0deg);
+  transform-origin: 0;
+  background-image: linear-gradient(0deg, #fff0 0%, #00ff7b 40%, #00ff2f 60%, #6660 100%);
+  width: 200%;
+  height: 10rem;
+  position: fixed;
+  top: 100%;
+  left: 50%;
+}
+
+.card:hover {
+  box-shadow: 0 54px 55px #e9767640, 0 -12px 30px #f7eded1f, 0 4px 6px #e38f8f1f, 0 12px 13px #c4c0ec2b, 0 -3px 5px #26015617;
+}
+
+.card-image {
+  object-fit: cover;
+  border-radius: 7px;
+  width: 120%;
+  height: 500px;
+}
+
+.card-title {
+  color: #e9e1d8;
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.card-year {
+  color: #eae0e0;
+}
+
+.card-duration {
+  color: #b3c1be;
+  margin: 5px 0;
+  font-size: 20px;
+  display: block;
+}
+
+@media (width <= 768px) {
+  #newsletterForm {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #newsletterForm button {
+    width: 100%;
+  }
+}
+
+label {
+  color: #16241b;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#newsletterForm {
+  background-color: #dbeedc;
+  border-radius: 8px;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+#newsletterForm input[type="email"] {
+  border: 1px solid #100101;
+  border-radius: 5px;
+  width: 50%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#newsletterForm button {
+  color: #050000;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: #c10a2f;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  max-width: 150px;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+#newsletterForm button:hover {
+  background-color: #eee017;
+}
+/*# sourceMappingURL=index.77a9bc14.css.map */

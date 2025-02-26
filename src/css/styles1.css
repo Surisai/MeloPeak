@@ -1,0 +1,64 @@
+h1 {
+  font: optional;
+  color: #f1d6d6;
+  font-size: 3rem;
+}
+p {
+  font: optional;
+  color: #f1d6d6;
+  font-size: 1rem;
+}
+/*Form*/
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.form-group button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #ff0059;
+  cursor: pointer;
+}
+.form-group button:hover {
+  background-color: #0056b3;
+}
+.btn-primary {
+  background-color: #b60a2d;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #e2712b;
+}
+.links-container {
+  margin-top: 10px;
+}
+.links-container input {
+  margin-right: 10px;
+}
+#submittedArtistInfo {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Preeya Surisai">
+    <title>Request a New Artist</title>
+
+    <link id="stylesheet" rel="stylesheet" href="/request_artist.a6f583de.css">
+    <link id="stylesheet" rel="stylesheet" href="/index.bfa1d38c.css">
+  </head>
+  <body>
+    <header>
+      <h1>Request a New Artist</h1>
+      <p>Help us improve our music library by suggesting new artists!</p>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <form id="artistRequestForm">
+          <div class="form-group">
+            <label for="artistName">Artist Name:</label>
+            <input type="text" class="form-control" id="artistName" name="artistName" required="" placeholder="Enter the artist's name">
+          </div>
+
+          <div class="form-group">
+            <label for="musicGenre">Music Genre:</label>
+            <input type="text" class="form-control" id="musicGenre" name="musicGenre" list="genres" placeholder="Select or enter a genre">
+            <datalist id="genres">
+              <option value="Rock"></option>
+              <option value="Pop"></option>
+              <option value="Jazz"></option>
+              <option value="Classical"></option>
+              <option value="R&B"></option>
+              <option value="Rap"></option>
+              <option value="Electronic"></option>
+              <option value="Country"></option>
+              <option value="Blues"></option>
+              <option value="Reggae"></option>
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="socialMediaUrls">Social Media URLs:</label>
+            <input type="url" class="form-control" id="socialMediaUrls" name="socialMediaUrls" placeholder="Enter social media URL">
+          </div>
+
+          <div class="form-group">
+            <label for="songVideoUrls">Example Song/Video URLs:</label>
+            <div id="songVideoUrlsContainer">
+              <input type="url" class="form-control" name="songVideoUrls" placeholder="Enter a song/video URL">
+            </div>
+            <button type="button" id="add-song-video-url">Add another URL</button>
+          </div>
+
+          <div class="form-group">
+            <label for="explicitLyrics">
+              <input type="checkbox" id="explicitLyrics" name="explicitLyrics">
+              Explicit Lyrics
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" required="" placeholder="Explain why this artist should be added"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Submit Request</button>
+        </form>
+      </div>
+
+      <div id="submittedArtistInfo" style="display: none">
+        <!-- The submitted artist information will be displayed here -->
+      </div>
+    </main>
+
+    <footer>
+      <p><a href="/index.html">Back to Main Page</a></p>
+    </footer>
+
+    <!-- Main App JavaScript File -->
+    <script src="/request_artist.b881123f.js"></script>
+  <script src="/request_artist.803cbf64.js"></script></body>
+</html>

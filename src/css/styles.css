@@ -1,0 +1,157 @@
+/*Styles.css*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #12321f;
+  padding: 1.5rem;
+  min-width: 1110px;
+  place-items: center;
+}
+h1 {
+  color: #eacece;
+  font-size: 3.5rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Ensure cards stay in a single row */
+  justify-content: space-around; /* Adjust alignment of cards */
+  gap: 0px; /* Adjust the gap between cards */
+}
+
+.card {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(240, 15%, 9%);
+  --paragraph: hsl(0, 0%, 83%);
+  --line: hsl(240, 9%, 17%);
+  --primary: hsl(51, 89%, 48%);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 1rem;
+  width: 19rem;
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(at 88% 40%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 49% 30%, rgb(21, 26, 20) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, rgb(20, 26, 22) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, hsl(158, 98%, 26%) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, hsl(164, 97%, 36%) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, hsl(164, 94%, 13%) 0px, transparent 85%);
+
+  text-align: center;
+  width: calc(26.66% - 20px); /*Set each card to occupy roughly 1/3 of the container width */
+  margin-bottom: 20px; /* Adjust bottom margin as needed */
+  transition: all 0.3s;
+}
+
+.card .card__border::before {
+  content: "";
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 200;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%), rotate(0deg);
+  transform-origin: left;
+
+  width: 200%;
+  height: 10rem;
+  background-image: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsl(149, 100%, 50%) 40%,
+    hsl(131, 100%, 50%) 60%,
+    hsla(0, 0%, 40%, 0) 100%
+  );
+}
+
+.card:hover {
+  box-shadow:
+    rgba(233, 118, 118, 0.25) 0px 54px 55px,
+    rgba(247, 237, 237, 0.12) 0px -12px 30px,
+    rgba(227, 143, 143, 0.12) 0px 4px 6px,
+    rgba(196, 192, 236, 0.17) 0px 12px 13px,
+    rgba(38, 1, 86, 0.09) 0px -3px 5px;
+}
+
+.card-image {
+  border-radius: 7px;
+  width: 120%; /* Make sure image takes full width of the container */
+  height: 500px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.card-title {
+  color: #e9e1d8;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.card-year {
+  color: #eae0e0;
+}
+
+.card-duration {
+  color: #b3c1be;
+  display: block;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+/*Footer*/
+@media (max-width: 768px) {
+  #newsletterForm {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Adjust spacing for vertical layout */
+  }
+
+  #newsletterForm button {
+    width: 100%; /* Full-width button on smaller screens */
+  }
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #16241b;
+}
+
+#newsletterForm {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px; /* Adds space inside the form */
+  background-color: #dbeedc; /* Light background color for the form */
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#newsletterForm input[type="email"] {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #100101;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#newsletterForm button {
+  padding: 10px 20px;
+  background-color: #c10a2f;
+  border: none;
+  color: #050000;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  max-width: 150px; /* Adjust this value as needed */
+  width: 50%; /* Allows the button to scale within its container */
+  box-sizing: border-box;
+}
+
+#newsletterForm button:hover {
+  background-color: #eee017;
+}

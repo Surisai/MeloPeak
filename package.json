@@ -12,7 +12,8 @@
     "start": "npm run server",
     "zip": "bestzip assignment-4.zip src/*",
     "clean": "rimraf assignment-4.zip .parcel-cache dist",
-    "prepare-submission": "run-s prettier check zip"
+    "prepare-submission": "run-s prettier check zip",
+    "build": "parcel build src/index.html"
   },
   "dependencies": {
     "bestzip": "2.2.1",
